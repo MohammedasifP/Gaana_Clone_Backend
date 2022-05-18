@@ -4,6 +4,7 @@ const Favourite=require('../models/favourite.model');
 
 
 router.post("",async(req,res)=>{
+    console.log(req.body)
 try {
     const favsong=await Favourite.create(req.body);
     return res.status(200).send(favsong);
